@@ -2,14 +2,15 @@
   "name": "vue-generate-component",
   "version": "1.0.0",
   "description": "Vue js component generator",
-  "main": "lib/ng2cli.js",
-  "homepage": "https://github.com/NetanelBasal/ng2cli",
+  "main": "lib/vgc.js",
+  "homepage": "https://github.com/NetanelBasal/vue-generate-component",
   "scripts": {
     "build": "./node_modules/gulp/bin/gulp.js build",
     "prepublish": "npm run build"
   },
   "keywords": [
     "vue js",
+    "vue js component",
     "vue js cli",
     "vue js generator"
   ],
@@ -20,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NetanelBasal/ng2cli"
+    "url": "https://github.com/NetanelBasal/vue-generate-component"
   },
   "dependencies": {
     "babel-cli": "^6.3.17",
