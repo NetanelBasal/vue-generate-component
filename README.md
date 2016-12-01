@@ -1,4 +1,4 @@
-# Vue js component generator
+# Vue js component generator [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 CLI util for easy generate Vue js component
 ## Installation
@@ -11,7 +11,6 @@ npm install -g vue-generate-component
 ```bash
 vgc --help
 ```
-
 
 ####**Create new component**####
 ```bash
@@ -89,6 +88,51 @@ describe('FooterComponent', () => {
 .footer {
 
 }
+```
+
+####**Create new component single file**####
+```bash
+vgc -s home
+```
+will generate one vue file:
+```javascript
+<template>
+  <section class="home">
+    <h1>home Component</h1>
+  </section>
+</template>
+
+<script>
+  export default  {
+    name: 'home',
+    props: [],
+    mounted() {
+      
+    },
+    data() {
+      return {
+        
+      }
+    },
+    methods: {
+    
+    },
+    computed: {
+
+    }
+}
+</script>
+
+<style scoped>
+  .home {
+
+  }
+</style>
+```
+
+####**Create new component single file inside new folder**####
+```bash
+vgc -s home --folder
 ```
 
 ####**Create new directive**####

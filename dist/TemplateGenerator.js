@@ -170,6 +170,9 @@ var TemplateGenerator = function () {
     value: function _getSingleTpl(type) {
       var extension = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'js';
 
+      if (type === 'single') {
+        return this.TEMPLATES_DIR + '/' + type + '/temp.vue';
+      }
       return this.TEMPLATES_DIR + '/' + type + '/temp.' + type + '.' + extension;
     }
 
@@ -198,6 +201,9 @@ var TemplateGenerator = function () {
   }, {
     key: '_createFilePath',
     value: function _createFilePath(name, type, fileType) {
+      if (type === 'single') {
+        return _path2.default.join(process.cwd(), name + '.vue');
+      }
       return _path2.default.join(process.cwd(), name + '.' + type + '.' + fileType);
     }
   }]);

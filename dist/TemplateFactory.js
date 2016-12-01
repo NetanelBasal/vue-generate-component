@@ -14,6 +14,10 @@ var _DirectiveTpl = require('./templates/DirectiveTpl');
 
 var _DirectiveTpl2 = _interopRequireDefault(_DirectiveTpl);
 
+var _SingleTpl = require('./templates/SingleTpl');
+
+var _SingleTpl2 = _interopRequireDefault(_SingleTpl);
+
 var _TemplateGenerator = require('./TemplateGenerator');
 
 var _TemplateGenerator2 = _interopRequireDefault(_TemplateGenerator);
@@ -44,6 +48,7 @@ var TemplateFactory = function () {
        * Generate Vue 2 component
        */
       if (cli.component) {
+
         return new _TemplateGenerator2.default(new _ComponentTpl2.default(cli.component));
       }
 
@@ -52,6 +57,13 @@ var TemplateFactory = function () {
        */
       if (cli.directive) {
         return new _TemplateGenerator2.default(new _DirectiveTpl2.default(cli.directive));
+      }
+
+      /**
+       * Generate Vue 2 single file component
+       */
+      if (cli.single) {
+        return new _TemplateGenerator2.default(new _SingleTpl2.default(cli.single, cli.folder));
       }
     }
   }]);
