@@ -19,7 +19,7 @@ vgc footer
 ```
 Will generate four files:
 
-**footer.component.ts**
+**footer.component.js**
 ```javascript
 export default  {
   name: 'footer',
