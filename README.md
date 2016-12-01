@@ -96,13 +96,13 @@ vgc -s home
 ```
 will generate one vue file:
 ```javascript
-<template>
+<template lang="html">
   <section class="home">
     <h1>home Component</h1>
   </section>
 </template>
 
-<script>
+<script lang="js">
   export default  {
     name: 'home',
     props: [],
@@ -123,7 +123,7 @@ will generate one vue file:
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .home {
 
   }
