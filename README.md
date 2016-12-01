@@ -141,7 +141,7 @@ vgc -d my-directive
 ```
 will generate:
 
-**my-directive.directive.ts**
+**my-directive.directive.js**
 ```javascript
 import Vue from 'vue';
 
