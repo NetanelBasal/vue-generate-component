@@ -59,7 +59,7 @@ var TemplateGenerator = function () {
 
       var filesType = _config2.default.getConfigFile().filesType;
       if (options.isDir) {
-        this._createDirectory(this._getDirPath(type), { name: name, actions: actions }, filesType);
+        this._createDirectory(this._getDirPath(type), { name: name, actions: actions, filesType: filesType }, filesType);
       } else {
         var tpl = this._compileTpl(this._getSingleTpl(type), { name: name, actions: actions, filesType: filesType });
         this._createFile(name, type, filesType.js, tpl);
