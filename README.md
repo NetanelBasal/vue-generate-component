@@ -42,7 +42,7 @@ export default  {
 
 ```
 
-**footer.component.spec.ts**
+**footer.component.spec.js**
 ```javascript
 import Vue from 'vue';
 import FooterComponent from './index.vue';
