@@ -59,9 +59,9 @@ var TemplateGenerator = function () {
 
       var filesType = _config2.default.getConfigFile().filesType;
       if (options.isDir) {
-        this._createDirectory(this._getDirPath(type), { name: name, actions: actions }, filesType);
+        this._createDirectory(this._getDirPath(type), { name: name, actions: actions, filesType: filesType }, filesType);
       } else {
-        var tpl = this._compileTpl(this._getSingleTpl(type), { name: name, actions: actions });
+        var tpl = this._compileTpl(this._getSingleTpl(type), { name: name, actions: actions, filesType: filesType });
         this._createFile(name, type, filesType.js, tpl);
       }
     }
@@ -78,10 +78,11 @@ var TemplateGenerator = function () {
     key: '_compileTpl',
     value: function _compileTpl(file, _ref) {
       var name = _ref.name,
-          actions = _ref.actions;
+          actions = _ref.actions,
+          filesType = _ref.filesType;
 
       var compiled = _swig2.default.compileFile(file);
-      return compiled({ name: name, actions: actions });
+      return compiled({ name: name, actions: actions, filesType: filesType });
     }
 
     /**
