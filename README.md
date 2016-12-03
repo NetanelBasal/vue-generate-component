@@ -163,7 +163,6 @@ Vue.directive('my-directive', {
 ```
 
 ### Change the default file types for html and style
-If you are using something else from the default html and scss you can set this one time like this:
 ```bash
 sudo vgc --html jade --style less
 ```
