@@ -16,7 +16,7 @@ vgc --help
 ```bash
 vgc footer
 ```
-Will generate four files:
+Will generate five files:
 
 **footer.component.js**
 ```javascript
@@ -88,6 +88,13 @@ describe('FooterComponent', () => {
 .footer {
 
 }
+```
+
+**index.vue**
+```
+<template src="./footer.component.html"></template>
+<script src="./footer.component.js"></script>
+<style src="./footer.component.scss"></style>
 ```
 
 ####**Create new component single file**####
