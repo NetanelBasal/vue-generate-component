@@ -1,7 +1,7 @@
 {
   "filesType": {
     "js": "js",
-    "html": "html",
-    "style": "scss"
+    "html": "pug",
+    "style": "less"
   }
 }
