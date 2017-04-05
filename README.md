@@ -12,7 +12,7 @@ npm install -g vue-generate-component
 vgc --help
 ```
 
-#### Create new component
+### Create new component
 ```bash
 vgc footer
 ```
@@ -97,7 +97,7 @@ describe('FooterComponent', () => {
 <style src="./footer.component.scss" scoped lang="scss"></style>
 ```
 
-####**Create new component single file**####
+### Create new component single file
 ```bash
 vgc -s home
 ```
@@ -137,12 +137,12 @@ will generate one vue file:
 </style>
 ```
 
-####**Create new component single file inside new folder**####
+### Create new component single file inside new folder
 ```bash
 vgc -s home --folder
 ```
 
-####**Create new directive**####
+### Create new directive
 ```bash
 vgc -d my-directive
 ```
