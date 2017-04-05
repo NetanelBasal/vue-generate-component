@@ -12,7 +12,7 @@ npm install -g vue-generate-component
 vgc --help
 ```
 
-####**Create new component**####
+#### Create new component
 ```bash
 vgc footer
 ```
