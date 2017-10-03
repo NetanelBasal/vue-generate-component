@@ -12,19 +12,20 @@
 <script lang="{{ filesType.js }}">
   export default  {
     name: '{{name | kebabCase}}',
+    components: {},
     props: [],
-    mounted() {
-
-    },
-    data() {
+    data () {
       return {
 
       }
     },
-    methods: {
+    computed: {
 
     },
-    computed: {
+    mounted () {
+
+    },
+    methods: {
 
     }
 }
