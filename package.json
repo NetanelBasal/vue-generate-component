@@ -1,11 +1,12 @@
 {
   "name": "vue-generate-component",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Vue js component generator",
   "main": "lib/vgc.js",
   "homepage": "https://github.com/NetanelBasal/vue-generate-component",
   "scripts": {
-    "build": "rm -rf dist && ./node_modules/gulp/bin/gulp.js build",
+    "build": "rm -rf dist && npm run gulp -- build",
+    "gulp": "gulp",
     "prepublish": "npm run build"
   },
   "files": [
