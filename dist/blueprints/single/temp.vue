@@ -9,7 +9,7 @@
 {% endif %}
 </template>
 
-<script lang="{{ filesType.js }}">
+<script lang="{{ filesType.script }}">
   export default  {
     name: '{{name | kebabCase}}',
     props: [],
