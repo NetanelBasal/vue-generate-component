@@ -14,10 +14,10 @@ exports.default = [{
   group: "options",
   description: 'set the default html templates'
 }, {
-  name: 'style',
+  name: 'script',
   type: String,
   group: "options",
-  description: 'set the default style file'
+  description: 'set the default script language'
 }, {
   name: 'component',
   alias: 'c',
@@ -25,6 +25,16 @@ exports.default = [{
   group: "options",
   description: 'generate Vue js component',
   defaultOption: true
+}, {
+  name: 'spec',
+  type: String,
+  group: "options",
+  description: 'set the default spec language'
+}, {
+  name: 'style',
+  type: String,
+  group: "options",
+  description: 'set the default style file'
 }, {
   name: 'directive',
   alias: 'd',

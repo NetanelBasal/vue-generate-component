@@ -1,6 +1,7 @@
 {
   "filesType": {
-    "js": "js",
+    "spec": "js",
+    "script": "js",
     "html": "html",
     "style": "scss"
   }

@@ -62,7 +62,7 @@ var TemplateGenerator = function () {
         this._createDirectory(this._getDirPath(type), { name: name, actions: actions, filesType: filesType }, filesType);
       } else {
         var tpl = this._compileTpl(this._getSingleTpl(type), { name: name, actions: actions, filesType: filesType });
-        this._createFile(name, type, filesType.js, tpl);
+        this._createFile(name, type, filesType.script, tpl);
       }
     }
 
@@ -153,6 +153,14 @@ var TemplateGenerator = function () {
 
       if (newName.indexOf('sty') > -1) {
         newName = newName.replace(/sty/, 'component').replace(/extension/, fileTypes.style);
+      }
+
+      if (newName.indexOf('script') > -1) {
+        newName = newName.replace(/script/, 'component').replace(/extension/, fileTypes.script);
+      }
+
+      if (newName.indexOf('spec') > -1) {
+        newName = newName.replace(/extension/, fileTypes.spec);
       }
 
       return newName;

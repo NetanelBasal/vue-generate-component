@@ -1,19 +1,19 @@
-export default  {
+export default {
   name: '{{name | kebabCase}}',
+  components: {}, 
   props: [],
-  mounted() {
-    
-  },
-  data() {
+  data () {
     return {
-      
+
     }
-  },
-  methods: {
-   
   },
   computed: {
 
+  },
+  mounted () {
+
+  },
+  methods: {
+
   }
 }
-
