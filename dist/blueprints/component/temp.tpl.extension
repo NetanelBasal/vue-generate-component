@@ -1,8 +1,3 @@
-{% if filesType.html === 'jade' || filesType.html === 'pug' %}
-section(class="{{name | kebabCase}}")
-  h1 {{name | kebabCase}} Component
-{% else %}
-<section class="{{name | kebabCase}}">
-  <h1>{{name | kebabCase}} Component</h1>
-</section>
-{% endif %}
+<div class="{{(name.split('/')[name.split('/').length-1]) | kebabCase}}"> 
+    <h1>{{(name.split('/')[name.split('/').length-1]) | kebabCase}}Component</h1>
+</div>

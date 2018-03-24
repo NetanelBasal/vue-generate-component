@@ -14,6 +14,10 @@ var _DirectiveTpl = require('./templates/DirectiveTpl');
 
 var _DirectiveTpl2 = _interopRequireDefault(_DirectiveTpl);
 
+var _PipeTpl = require('./templates/PipeTpl');
+
+var _PipeTpl2 = _interopRequireDefault(_PipeTpl);
+
 var _SingleTpl = require('./templates/SingleTpl');
 
 var _SingleTpl2 = _interopRequireDefault(_SingleTpl);
@@ -64,6 +68,10 @@ var TemplateFactory = function () {
        */
       if (cli.single) {
         return new _TemplateGenerator2.default(new _SingleTpl2.default(cli.single, cli.folder));
+      }
+
+      if (cli.pipe) {
+        return new _TemplateGenerator2.default(new _PipeTpl2.default(cli.pipe));
       }
     }
   }]);

@@ -1,37 +1,25 @@
-<template lang="{{filesType.html}}">
-{% if filesType.html === 'jade' || filesType.html === 'pug' %}
-  section(class="{{name | kebabCase}}")
-    h1 {{name | kebabCase}} Component
-{% else %}
-  <section class="{{name | kebabCase}}">
-    <h1>{{name | kebabCase}} Component</h1>
-  </section>
-{% endif %}
+<template>
+  <div class="{{(name.split('/')[name.split('/').length-1]) | kebabCase}}"> 
+      <h1>{{(name.split('/')[name.split('/').length-1]) | kebabCase}}Component</h1>
+  </div>
 </template>
+<script lang="ts">
+  import Vue from 'vue';
+  import Component from 'vue-class-component';
 
-<script lang="{{ filesType.script }}">
-  export default  {
-    name: '{{name | kebabCase}}',
-    props: [],
-    mounted() {
+  @Component({})
+  export default class {{(name.split('/')[name.split('/').length-1]) | pascalCase}}Component extends Vue {
 
-    },
-    data() {
-      return {
-
-      }
-    },
-    methods: {
-
-    },
-    computed: {
-
+    mounted (){
+      console.log('hello from app');
     }
-}
+    
+  }
+
 </script>
 
-<style scoped lang="{{ filesType.style }}">
-  .{{name | kebabCase}} {
+<style scoped lang="scss">
+  .{{(name.split('/')[name.split('/').length-1]) | kebabCase}} {
 
   }
 </style>

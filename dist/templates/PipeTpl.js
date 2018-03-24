@@ -11,18 +11,18 @@ function _classCallCheck(instance, Constructor) {
 }
 
 /**
- * DirectiveTpl
+ * PipeTpl
  */
-var DirectiveTpl =
+var PipeTpl =
 /**
  *
- * @param name - the directive name
+ * @param name - the Pipe name
  */
-function DirectiveTpl(name) {
-  _classCallCheck(this, DirectiveTpl);
+function PipeTpl(name) {
+  _classCallCheck(this, PipeTpl);
 
-  this.type = 'directive';
+  this.type = 'Pipe';
   this.name = name;
 };
 
-exports.default = DirectiveTpl;
+exports.default = PipeTpl;

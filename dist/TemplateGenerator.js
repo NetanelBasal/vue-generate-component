@@ -118,6 +118,7 @@ var TemplateGenerator = function () {
       _fsExtra2.default.readdir(dirPath, function (err, dir) {
         var name = data.name;
         var folder = _path2.default.join(process.cwd(), name);
+        name = name.split('/')[name.split('/').length - 1];
         var filePath = void 0;
 
         dir.forEach(function (tempFile) {

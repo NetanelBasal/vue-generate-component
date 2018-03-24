@@ -8,7 +8,9 @@ var _lodash = require('lodash');
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
 exports.default = function (swig) {
   /* ===============
@@ -28,5 +30,9 @@ exports.default = function (swig) {
 
   swig.setFilter('upperCase', function (input) {
     return input.toUpperCase();
+  });
+
+  swig.setFilter('pascalCase', function (input) {
+    return _lodash2.default.capitalize(_lodash2.default.camelCase(input));
   });
 };

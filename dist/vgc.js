@@ -50,12 +50,10 @@ if (options.help) {
 /* ===============
  Set the file extensions
  =============== */
-if (options.html || options.style || options.script || options.spec) {
+if (options.html || options.style) {
   var configData = _config2.default.getConfigFile();
   configData.filesType.html = options.html ? options.html : configData.filesType.html;
   configData.filesType.style = options.style ? options.style : configData.filesType.style;
-  configData.filesType.script = options.script ? options.script : configData.filesType.script;
-  configData.filesType.spec = options.spec ? options.spec : configData.filesType.spec;
   _config2.default.updateConfigFile(configData);
 }
 

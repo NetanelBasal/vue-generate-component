@@ -169,9 +169,9 @@ Vue.directive('my-directive', {
 })
 ```
 
-### Change the default file types for html, style, script, and spec
+### Change the default file types for html and style
 ```bash
-sudo vgc --html jade --style less --script ts --spec ts
+sudo vgc --html jade --style less
 ```
 ### PR ME!!!
 If you want to fix/improve the templates please PR ME.

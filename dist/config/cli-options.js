@@ -9,32 +9,12 @@ exports.default = [{
   group: "options",
   description: 'help'
 }, {
-  name: 'html',
-  type: String,
-  group: "options",
-  description: 'set the default html templates'
-}, {
-  name: 'script',
-  type: String,
-  group: "options",
-  description: 'set the default script language'
-}, {
   name: 'component',
   alias: 'c',
   type: String,
   group: "options",
   description: 'generate Vue js component',
   defaultOption: true
-}, {
-  name: 'spec',
-  type: String,
-  group: "options",
-  description: 'set the default spec language'
-}, {
-  name: 'style',
-  type: String,
-  group: "options",
-  description: 'set the default style file'
 }, {
   name: 'directive',
   alias: 'd',
@@ -47,6 +27,12 @@ exports.default = [{
   type: String,
   group: "options",
   description: 'generate Vue js component single file'
+}, {
+  name: 'pipe',
+  alias: 'p',
+  type: String,
+  group: "options",
+  description: 'generate Vue js pipe'
 }, {
   name: 'folder',
   alias: 'f',
