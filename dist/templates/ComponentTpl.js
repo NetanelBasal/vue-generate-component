@@ -14,12 +14,13 @@ var ComponentTpl =
  *
  * @param name - the component name
  */
-function ComponentTpl(name) {
+function ComponentTpl(name, postfix) {
   _classCallCheck(this, ComponentTpl);
 
   this.type = 'component';
   this.isDir = true;
-  this.name = name;
+  this.name = postfix ? name + '.' + postfix : name;
+  // this.postfix = postfix;
 };
 
 exports.default = ComponentTpl;

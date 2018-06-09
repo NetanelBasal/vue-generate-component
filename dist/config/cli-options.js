@@ -53,4 +53,9 @@ exports.default = [{
   type: Boolean,
   group: "options",
   description: 'generate Vue js component single file inside new folder'
+}, {
+  name: 'postfix',
+  type: String,
+  group: "options",
+  description: 'create postfix in file name'
 }];

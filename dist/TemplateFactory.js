@@ -49,7 +49,7 @@ var TemplateFactory = function () {
        */
       if (cli.component) {
 
-        return new _TemplateGenerator2.default(new _ComponentTpl2.default(cli.component));
+        return new _TemplateGenerator2.default(new _ComponentTpl2.default(cli.component, cli.postfix));
       }
 
       /**

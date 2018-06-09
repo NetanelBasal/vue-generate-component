@@ -55,11 +55,12 @@ var TemplateGenerator = function () {
       var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
       var name = options.name,
           type = options.type,
-          actions = options.actions;
+          actions = options.actions,
+          postfix = options.postfix;
 
       var filesType = _config2.default.getConfigFile().filesType;
       if (options.isDir) {
-        this._createDirectory(this._getDirPath(type), { name: name, actions: actions, filesType: filesType }, filesType);
+        this._createDirectory(this._getDirPath(type), { name: name, actions: actions, filesType: filesType, postfix: postfix }, filesType);
       } else {
         var tpl = this._compileTpl(this._getSingleTpl(type), { name: name, actions: actions, filesType: filesType });
         this._createFile(name, type, filesType.script, tpl);
@@ -122,7 +123,7 @@ var TemplateGenerator = function () {
 
         dir.forEach(function (tempFile) {
           var compiled = _this._compileTpl(dirPath + '/' + tempFile, data);
-          var fileName = _this._createFileName(tempFile, name, fileTypes);
+          var fileName = _this._createFileName(tempFile, name, fileTypes, data.postfix);
 
           filePath = _path2.default.join(folder, fileName);
 
@@ -144,19 +145,22 @@ var TemplateGenerator = function () {
 
   }, {
     key: '_createFileName',
-    value: function _createFileName(tempFile, name, fileTypes) {
+    value: function _createFileName(tempFile, name, fileTypes, postfix) {
       var newName = tempFile.replace(/temp/, name);
 
       if (newName.indexOf('tpl') > -1) {
-        newName = newName.replace(/tpl/, 'component').replace(/extension/, fileTypes.html);
+        newName = newName.replace(/tpl./, '');
+        newName = newName.replace(/extension/, fileTypes.html);
       }
 
       if (newName.indexOf('sty') > -1) {
-        newName = newName.replace(/sty/, 'component').replace(/extension/, fileTypes.style);
+        newName = newName.replace(/sty./, '');
+        newName = newName.replace(/extension/, fileTypes.style);
       }
 
       if (newName.indexOf('script') > -1) {
-        newName = newName.replace(/script/, 'component').replace(/extension/, fileTypes.script);
+        newName = newName.replace(/script./, '');
+        newName = newName.replace(/extension/, fileTypes.script);
       }
 
       if (newName.indexOf('spec') > -1) {
