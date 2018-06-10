@@ -20,7 +20,6 @@ function ComponentTpl(name, postfix) {
   this.type = 'component';
   this.isDir = true;
   this.name = postfix ? name + '.' + postfix : name;
-  // this.postfix = postfix;
 };
 
 exports.default = ComponentTpl;
