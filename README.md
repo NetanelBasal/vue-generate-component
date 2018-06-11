@@ -18,7 +18,7 @@ vgc footer
 ```
 Will generate five files:
 
-**footer.component.js**
+**footer.js**
 ```javascript
 export default  {
   name: 'footer',
@@ -41,7 +41,7 @@ export default  {
 
 ```
 
-**footer.component.spec.js**
+**footer.spec.js**
 ```javascript
 import Vue from 'vue';
 import FooterComponent from './index.vue';
@@ -75,7 +75,7 @@ describe('FooterComponent', () => {
 
 ```
 
-**footer.component.html**
+**footer.html**
 ```html
 <section class="footer">
   <h1>footer Component</h1>
@@ -83,7 +83,7 @@ describe('FooterComponent', () => {
 
 ```
 
-**footer.component.scss**
+**footer.scss**
 ```css
 .footer {
 
@@ -168,6 +168,18 @@ Vue.directive('my-directive', {
   }
 })
 ```
+
+### If you want use postfix in file name, use -- postfix
+```bash
+vgc footer --postfix page
+```
+Will generate files with postfix:
+
+* footer.page.js
+* footer.page.css
+* footer.page.html
+* footer.page.spec.js
+
 
 ### Change the default file types for html, style, script, and spec
 ```bash
