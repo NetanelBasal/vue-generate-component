@@ -1,6 +1,6 @@
 export default {
   name: '{{name | kebabCase}}',
-  components: {}, 
+  components: {},
   props: [],
   data () {
     return {
