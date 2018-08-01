@@ -10,13 +10,13 @@
 </template>
 
 <script lang="{{ filesType.script }}">
-  export default  {
+  export default {
     name: '{{name | kebabCase}}',
     props: [],
-    mounted() {
+    mounted () {
 
     },
-    data() {
+    data () {
       return {
 
       }
