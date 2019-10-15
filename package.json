@@ -35,7 +35,7 @@
     "fs-extra": "^0.26.2",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.1",
-    "lodash": "^3.10.1",
+    "lodash": "^4.17.13",
     "swig": "^1.4.2"
   },
   "devDependencies": {
