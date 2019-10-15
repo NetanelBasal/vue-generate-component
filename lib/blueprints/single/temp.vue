@@ -14,10 +14,10 @@
   export default  {
     name: '{{name | kebabCase}}',
     props: [],
-    mounted() {
+    mounted () {
 
     },
-    data() {
+    data () {
       return {
 
       }
