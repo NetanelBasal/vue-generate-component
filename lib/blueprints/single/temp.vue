@@ -10,7 +10,8 @@
 </template>
 
 <script lang="{{ filesType.script }}">
-  export default {
+{% if filesType.script !== 'ts' %}
+  export default  {
     name: '{{name | kebabCase}}',
     props: [],
     mounted () {
@@ -28,6 +29,18 @@
 
     }
 }
+
+{% else %}
+  import {Component, Vue} from "vue-property-decorator";
+
+  @Component({
+    components: []
+  })
+  export default class {{ name | PascalCase }} extends Vue {
+
+
+  }
+{% endif %}
 </script>
 
 <style scoped lang="{{ filesType.style }}">
