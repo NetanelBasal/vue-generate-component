@@ -23,7 +23,7 @@ export default {
 import {Component, Vue} from "vue-property-decorator";
 
 @Component({
-  components: []
+  components: {}
 })
 export default class {{ name | PascalCase }} extends Vue {
 
