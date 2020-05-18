@@ -1,17 +1,16 @@
-var gulp = require('gulp');
-var babel = require('gulp-babel');
-var del = require('del');
-var runSequence = require('run-sequence');
+const gulp = require('gulp');
+const babel = require('gulp-babel');
+const del = require('del');
 
 gulp.task('dev', function() {
     return gulp.src(['./lib/**/*.js', '!./lib/blueprints/**/*.js'])
-        .pipe(babel({
-            presets: ['es2015']
-        }))
-        .pipe(gulp.dest('dist'));
+    .pipe(babel({
+        presets: ['@babel/preset-env']
+    }))
+    .pipe(gulp.dest('dist'))
 });
 
-gulp.task('copy', function() {
+gulp.task('copy', function(callback) {
     gulp.src('./lib/blueprints/**/**', {
             base: "./lib"
         })
@@ -19,6 +18,7 @@ gulp.task('copy', function() {
 
     gulp.src('./lib/config/config.json')
         .pipe(gulp.dest('./dist/config'));
+    callback()
 });
 
 gulp.task('clean', function() {
@@ -29,8 +29,7 @@ gulp.task('clean', function() {
 
 
 gulp.task('build', function(callback) {
-    runSequence('clean',
+    return gulp.series('clean',
         'dev',
-        'copy',
-        callback);
+        'copy')(callback)
 });
